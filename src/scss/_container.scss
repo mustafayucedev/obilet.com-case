@@ -1,0 +1,9 @@
+.container {
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  @include min($xs) {
+    width: 320px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>obilet.com - Bilet Bul</title>
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <!-- Toastify -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <!-- Style Css -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header></header>
+
+      <main>
+        <section class="location">
+          <form id="searchForm" method="post">
+            <div class="location-top">
+              <div class="location-item">
+                <div class="location-icon">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="location-form">
+                  <label for="from-where">Nereden</label>
+                  <select id="from-where" name="origin-id"></select>
+                </div>
+              </div>
+              <div class="location-item">
+                <div class="location-icon">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="location-form">
+                  <label for="to-where">Nereye</label>
+                  <select id="to-where" name="destination-id"></select>
+                </div>
+              </div>
+              <div class="location-change">
+                <button type="button" id="location-change">
+                  <i class="fa-solid fa-arrow-up-a-z"></i>
+                </button>
+              </div>
+            </div>
+            <div class="location-bottom">
+              <div class="location-item">
+                <div class="location-icon">
+                  <i class="fa-solid fa-calendar-days"></i>
+                </div>
+                <div class="location-form">
+                  <label for="to-where">Tarih</label>
+                  <input
+                    type="date"
+                    id="date"
+                    name="departure-date"
+                    value=""
+                    required
+                  />
+                  <div class="location-days">
+                    <button type="button" id="today">Bugün</button>
+                    <button type="button" id="tomorrow" class="active">
+                      Yarın
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="location-button">
+                <button type="submit">Bileti Bul</button>
+              </div>
+            </div>
+          </form>
+        </section>
+      </main>
+
+      <footer>
+        <p>
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+          nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+          volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+          ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+          Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
+          molestie consequat, vel illum dolore eu feugiat nulla facilisis at
+          vero eros et accumsan et iusto odio dignissim qui blandit praesent
+          luptatum
+        </p>
+      </footer>
+      <div class="loader">
+        <img src="./images/loader.gif" alt="Loader" />
+      </div>
+    </div>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <script src="libary/momentjs/moment.min.js"></script>
+    <script src="js/searchLocation.js" type="module"></script>
+  </body>
+</html>

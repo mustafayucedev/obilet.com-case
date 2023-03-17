@@ -1,0 +1,63 @@
+.ticket {
+  padding: 10px;
+  height: 400px;
+  overflow-y: auto;
+  .ticket-item {
+    border: 0.5px solid $border-color;
+    border-radius: $border-radius;
+    padding: 10px;
+    margin-block-end: 10px;
+    .ticket-header {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 5px;
+      .ticket-hour {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        column-gap: 30px;
+        .ticket-hour-item {
+          color: $blue-color;
+          position: relative;
+          span {
+            display: block;
+            text-align: center;
+            font-size: 9px;
+            margin-bottom: 3px;
+          }
+          strong {
+            display: block;
+            text-align: center;
+            font-size: $size-16;
+            font-weight: 600;
+          }
+          &:first-child {
+            &:before {
+              content: "\f061";
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              right: -20px;
+              font-family: "Font Awesome 6 Free";
+              font-weight: 900;
+            }
+          }
+        }
+      }
+      .ticket-price {
+        @include center;
+        padding-inline: 10px;
+        background-color: $red-color;
+        border-radius: $border-radius;
+        color: $white-color;
+        font-size: $size-14;
+        font-weight: 500;
+      }
+    }
+    .ticket-station {
+      color: $text-color;
+      font-size: $size-12;
+    }
+  }
+}

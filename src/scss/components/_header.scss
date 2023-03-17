@@ -1,0 +1,33 @@
+header {
+  background-color: $blue-color;
+  color: $white-color;
+  padding-block: 20px;
+  margin-block-end: 15px;
+  .header-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 10px;
+    .header-turn-back {
+      a {
+        cursor: pointer;
+        i {
+          color: $white-color;
+          font-size: $size-16;
+        }
+      }
+    }
+    .header-information {
+      flex: 1 0 0;
+      max-width: 100%;
+      text-align: center;
+      h1 {
+        font-size: $size-14;
+        font-weight: 500;
+        margin-bottom: 5px;
+      }
+      div {
+        font-size: $size-12;
+      }
+    }
+  }
+}
