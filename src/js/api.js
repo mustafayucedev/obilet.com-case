@@ -16,7 +16,11 @@ const getData = async (url, params) => {
           "device-id": "PqtdftjloK3Kpka97+ILDzMa6D9740nggLiTzXiLlzA=",
         },
         language: "tr-TR",
-        data: params || null,
+        data: params
+          ? {
+              ...params,
+            }
+          : null,
       }),
     });
     const data = await res.json();
